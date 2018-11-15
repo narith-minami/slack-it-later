@@ -15,12 +15,35 @@
         width: 75px;
         height: 75px;
       }
+   #post-to-slack-comment {
+     font-size: 1.0rem;
+     width: 300px;
+     height: 40px;
+   }
+  .square_btn{
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #668ad8;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #627295;
+    border-radius: 3px;
+    margin-left: 8px;
+}
+.square_btn:active {/*ボタンを押したとき*/
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+}
     </style>
 
-    <h1>Extensions</h1>
-
-    <p id="title"></p>
-    <p id="url"></p>
+    <h2>Post to Slack</h2>
+    <div style="display:flex;">
+      <textarea id="post-to-slack-comment" placeholder="comment here"></textarea>
+      <button class="square_btn" id="post-to-share-button">Post</button>
+    </div>
+    <p id="post-to-slack-message" style="color:red;display:none;">Success!!<p>
 
     <script src="assets/scripts/jquery-2.1.1.min.js"></script>
 
@@ -35,4 +58,3 @@
   <body>
   </body>
 </html>
-
